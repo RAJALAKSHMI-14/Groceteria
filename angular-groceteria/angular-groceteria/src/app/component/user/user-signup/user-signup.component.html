@@ -1,0 +1,113 @@
+<p>user-signup works!</p>
+
+<div class="head-signup">
+
+<div class="container">
+    <form action=""method="post">
+        <h2>Registration</h2>
+        <div class="content">
+
+            <div class="input-box">
+                <label for="firstname">FirstName</label>
+                <input type="text" [(ngModel)]="firstName" placeholder="Enter first name" name="uname" required>
+            </div>
+
+            <div class="input-box">
+                <label for="lastname">LastName</label>
+                <input type="text" [(ngModel)]="lastName" placeholder="Enter last name" name="uname" required>
+            </div>
+
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input type="email" [(ngModel)]="emailId"  placeholder="Enter your valid email address " name="email" required>
+            </div>
+
+            <div class="input-box">
+                <label for="phonenumber">Phone Number</label>
+                <input type="tel" [(ngModel)]="phone"  placeholder="Enter valid phone number" name="phonenumber" required>
+            </div>
+
+
+            <div class="input-box">
+                <label for="dob">Date-of-Birth</label>
+                <input type="date"  [(ngModel)]="dob"  placeholder="Enter your DOB" name="dob" required>
+            </div>
+
+            <div class="input-box">
+                <label for="userRole">Role</label>
+                <input type="text" placeholder="Enter your role" name="userRole" required>
+            </div>
+
+            <div class="input-box">
+                <label for="city">District</label>
+                <input type="text"  [(ngModel)]="district"  placeholder="Enter your district" name="city" required>
+            </div>
+
+            <div class="input-box">
+                <label for="city">State</label>
+                <input type="text"  [(ngModel)]="state"  placeholder="Enter your state" name="city" required>
+            </div>
+
+
+
+            <div class="input-box">
+                <label for="address">Address</label>
+                <input type="text" [(ngModel)]="address"   placeholder="Enter valid address" name="address" required>
+            </div>
+
+            <div class="input-box">
+                <label for="zipcode">ZipCode</label>
+                <input type="text"  [(ngModel)]="zipcode"   placeholder="Enter your zipcode" name="zipcode" required>
+            </div>
+
+            <div class="input-box">
+                <label for="password">Password</label>
+                <input type="password" [(ngModel)]="password"   placeholder="Enter new password" name="password" required>
+            </div>
+
+            <!-- <div class="input-box">
+                <label for="Cpassword">Confirm Password</label>
+                <input type="text" [(ngModel)]=""   placeholder="Confirm password" name="Cpassword" required>
+            </div> -->
+
+
+            <!-- <span class="gender-title">Gender</span>
+            <div class="gender-category">
+                <input type="radio" name="gendertype" id="male" [(ngModel)]="gender">
+                <label for="gendertype">Male</label>
+
+                <input type="radio" name="gendertype" id="female" [(ngModel)]="gender">
+                <label for="gendertype">Female</label>
+                <input type="radio" name="gendertype" id="others" [(ngModel)]="gender">
+                <label for="gendertype">Others</label>
+            </div> -->
+
+
+            <span class="gender-title">Gender</span>
+<div class="gender-category">
+    <input type="radio" name="gendertype" id="male" [(ngModel)]="gender" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" name="gendertype" id="female" [(ngModel)]="gender" value="female">
+    <label for="female">Female</label>
+
+    <!-- Uncomment if you decide to add an "Others" option -->
+    
+    <input type="radio" name="gendertype" id="others" [(ngModel)]="gender" value="others">
+    <label for="others">Others</label>
+   
+</div>
+
+        </div>
+
+        <div class="alert">
+            <p>By clicking Sign Up, you agree to our <a href="#">Terms,</a> <a href="#">Privacy Policy</a>and <a href="#">Cookies Policy.</a> You may receive SMS
+                 notifications from us and can opt out at any time.</p>
+        </div>
+
+        <div class="button-container">
+            <button  (click)="signup()">Register</button>
+        </div>
+    </form>
+</div>
+</div>

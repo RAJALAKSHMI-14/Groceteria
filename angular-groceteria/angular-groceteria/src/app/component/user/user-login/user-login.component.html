@@ -1,0 +1,34 @@
+<p>login-works</p>
+
+<div class="head-login">
+
+
+    <div class="wrapper">
+        
+            <h1>Login</h1>
+
+            <div class="inputbox">
+                <input type="text" [(ngModel)]="emailId" placeholder="Emailid" required>
+                <i class="fa fa-solid fa-user"></i>
+                <div class="error">{{errormessage}}</div>
+            </div>
+
+            <div class="inputbox">
+                <input type="password" [(ngModel)]="password" placeholder="Password" required>
+                <i class="fa fa-solid fa-lock"></i>
+                <div class="error">{{errormessagep}}</div>
+            </div>
+
+            <div class="remember-forgot">
+               
+                <a (click)="routeToForgotPassword()">Forgot password?</a>
+            </div>
+
+            <button  class="btn"  (click)="login()" >Login</button>
+            <div class="register-link">
+                <p>Don't have an account?<a class="message" (click)="routeToNewUser()">Register</a></p>
+            </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,24 @@
+
+
+<header class="header">
+    <a class="logo"><img class="brand-logo" src="../../../assets/images/logo3.png" alt="logo">Groceteria</a>
+    <nav class="nav-items">
+      <i class="fa fa-home" style="color:white"></i><a (click)="routerToLink('/user/home')" [class.selected]="url === '/user/home'">Home</a>
+      <i class="fa fa-user-circle"style="color:white"></i><a (click)="routerToLink('/user/cart')" [class.selected]="url === '/user/cart'">Cart List</a>
+      <i class="fa fa-user-circle"style="color:white"></i><a (click)="routerToLink('/user/order')" [class.selected]="url === '/user/order'">Order</a>
+      <!-- <div [matMenuTriggerFor]="menu" class="user-name-item"><div>{{userName}}&nbsp;</div><div><mat-icon>expand_more</mat-icon></div></div>   
+<mat-menu #menu="matMenu">
+    <button (click)="routerToLink('/user/logout')" mat-menu-item><mat-icon>logout</mat-icon> Logout</button>
+  </mat-menu> -->
+
+  <div class="user-name-item" (click)="toggleMenu()">
+    <div>{{userName}}&nbsp;</div>
+    <div><i class="material-icons" style="color:white; cursor: pointer;">expand_more</i></div>
+</div>
+
+<div *ngIf="isMenuOpen" class="mat-menu">
+    <button (click)="routerToLink('/user/logout')"><i class="material-icons">logout</i> Logout</button>
+</div>
+
+    </nav>
+  </header>
